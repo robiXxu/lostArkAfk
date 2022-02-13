@@ -2,6 +2,7 @@ import pyautogui as gui
 import sys
 import time
 import pydirectinput as di
+import win32gui
 
 def getGameWindow(windowTitle):
   gameWindow = gui.getWindowsWithTitle(windowTitle)
@@ -73,4 +74,4 @@ if __name__ == '__main__':
     if len(prevWindows) > 0:
       prevWindows[0].activate()
 
-    time.sleep(afkTimer * 4)
+    time.sleep(afkTimer * 60)
